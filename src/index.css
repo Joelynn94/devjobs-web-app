@@ -1,0 +1,46 @@
+@import-normalize; /* bring in normalize.css styles */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  /* App color palette */
+  --default: #6e8098;
+  --primary: #5964e0;
+  --primary-accent: #939bf4;
+  --primary-secondary: #19202d;
+  --primary-secondary-accent: #121721;
+  --secondary: #ffffff;
+  --secondary-accent: #f4f6f8;
+  --tertiary: #9daec2;
+  --tertiary-accent: #6e8098;
+  --danger: #ff293b;
+  --danger-hover: #ff6976;
+  --success: #258c53;
+  --success-hover: #7cba98;
+
+  /* Font Family */
+  --font-family: 'Kumbh Sans', sans-serif;
+
+  /* Font sizes */
+  --font-body: 1rem;
+  --font-h1: 1.75rem;
+  --font-h2: 1.5rem;
+  --font-h3: 1.25rem;
+  --font-h4: 0.875rem;
+
+  /* Line heights */
+  --line-height-body: 1.625rem;
+  --line-height-h1: 2.125rem;
+  --line-height-h2: 1.813rem;
+  --line-height-h3: 1.5rem;
+  --line-height-h4: 1.125rem;
+
+  /* Basic spacing */
+  --padding-sm: 1.875rem;
+  --padding-md: 2.5rem;
+  --padding-lg: 3.125rem;
+  --padding-xl: 3.75rem;
+}
+
+img {
+  max-width: 100%;
+}
