@@ -10,7 +10,7 @@ const SearchInput = () => {
       className='search-input'
       icon={'search'}
       name='search'
-      placeholder='filter by title...'
+      placeholder='Filter by title...'
     />
   );
 };

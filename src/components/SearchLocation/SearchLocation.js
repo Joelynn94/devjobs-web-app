@@ -10,7 +10,7 @@ const SearchLocation = () => {
       className='location-input'
       icon={'location'}
       name='location'
-      placeholder='filter by location...'
+      placeholder='Filter by location...'
     />
   );
 };
