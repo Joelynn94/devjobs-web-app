@@ -3,7 +3,7 @@
 
 :root {
   /* App color palette */
-  --default: #6e8098;
+  --default: #f4f6f8;
   --primary: #5964e0;
   --primary-accent: #939bf4;
   --primary-secondary: #19202d;
@@ -54,6 +54,7 @@ html {
   margin: 0;
   padding: 0;
   font-family: var(--font-family);
+  background-color: var(--default);
 }
 
 img {

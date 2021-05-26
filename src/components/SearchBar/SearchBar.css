@@ -1,0 +1,8 @@
+.search-bar {
+  position: relative;
+  display: flex;
+  padding: 10px;
+  background: var(--secondary);
+  margin-top: -25px;
+  border-radius: 6px;
+}

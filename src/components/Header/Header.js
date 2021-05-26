@@ -21,7 +21,7 @@ const TopNavbar = () => {
     } else {
       setBackgroundImage(desktopImage);
     }
-  });
+  }, [windowWidth]);
 
   return (
     <header

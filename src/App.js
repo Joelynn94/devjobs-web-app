@@ -1,7 +1,9 @@
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
+import Container from './components/Container/Container';
 
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
+import SearchBar from './components/SearchBar/SearchBar';
 import './index.css';
 
 function App() {
@@ -9,7 +11,10 @@ function App() {
     <Router>
       <Header />
       <Main>
-        <h1>Hello</h1>
+        <Container>
+          <SearchBar />
+          <h1>Hello</h1>
+        </Container>
       </Main>
     </Router>
   );
