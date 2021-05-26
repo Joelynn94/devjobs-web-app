@@ -39,6 +39,21 @@
   --padding-md: 2.5rem;
   --padding-lg: 3.125rem;
   --padding-xl: 3.75rem;
+  --padding-2xl: 4.375rem;
+
+  /* Screen sizes */
+  --screen-xs: 300px;
+  --screen-sm: 576px;
+  --screen-md: 768px;
+  --screen-lg: 992px;
+  --screen-xl: 1200px;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
 }
 
 img {

@@ -1,0 +1,17 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 0px;
+  padding: var(--padding-md);
+}
+
+@media screen and (min-width: 768px) {
+  .app-header {
+    border-radius: 0px 0px 0px 100px;
+    padding: var(--padding-xl);
+  }
+}
