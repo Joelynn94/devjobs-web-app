@@ -7,7 +7,7 @@ const SearchLocation = () => {
   const [location, setLocation] = useState('');
   return (
     <Input
-      className='test'
+      className='location-input'
       icon={'location'}
       name='location'
       placeholder='filter by location...'

@@ -6,7 +6,12 @@ import './SearchInput.css';
 const SearchInput = () => {
   const [search, setSearch] = useState('');
   return (
-    <Input icon={'search'} name='search' placeholder='filter by title...' />
+    <Input
+      className='search-input'
+      icon={'search'}
+      name='search'
+      placeholder='filter by title...'
+    />
   );
 };
 

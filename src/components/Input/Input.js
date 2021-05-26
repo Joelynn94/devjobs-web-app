@@ -28,8 +28,10 @@ const Input = ({
     focused: focused,
   });
 
+  const classes = clsx('ui-input__group', className);
+
   return (
-    <div className='ui-input__group'>
+    <div className={classes}>
       {icon ? (
         <>
           <span className='ui-input__icon'>

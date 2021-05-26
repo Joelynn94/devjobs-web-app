@@ -1,15 +1,14 @@
 /* Customize the label (the container) */
 .ui-checkbox {
   position: relative;
-  height: 56px;
-  border-radius: 4px 4px 0 0;
-  padding: 0px 20px;
+  border-radius: 4px;
   display: inline-flex;
   align-items: center;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  cursor: pointer;
 }
 
 /* Hide the browser's default checkbox */

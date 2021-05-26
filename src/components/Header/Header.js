@@ -6,6 +6,7 @@ import mobileImage from '../../assets/mobile/bg-pattern-header.svg';
 
 import './Header.css';
 import ToggleSwitch from '../ToggleSwitch/ToggleSwitch';
+import Container from '../Container/Container';
 
 const TopNavbar = () => {
   const [backgroundImage, setBackgroundImage] = useState('');
@@ -28,8 +29,10 @@ const TopNavbar = () => {
       className='app-header'
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <Logo />
-      <ToggleSwitch />
+      <Container>
+        <Logo />
+        <ToggleSwitch />
+      </Container>
     </header>
   );
 };
