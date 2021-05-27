@@ -8,13 +8,10 @@ import './Header.css';
 import ToggleSwitch from '../ToggleSwitch/ToggleSwitch';
 import Container from '../Container/Container';
 
-const TopNavbar = () => {
+const TopNavbar = ({ windowWidth }) => {
   const [backgroundImage, setBackgroundImage] = useState('');
-  const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
-    setWindowWidth(window.innerWidth);
-
     if (windowWidth <= 767) {
       setBackgroundImage(mobileImage);
     } else if (windowWidth <= 1200) {

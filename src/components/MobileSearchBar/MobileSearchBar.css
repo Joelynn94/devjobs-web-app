@@ -5,6 +5,25 @@
   background: var(--secondary);
   margin-top: -25px;
   border-radius: 6px;
-  justify-content: space-between;
   align-items: center;
+  height: 60px;
+}
+
+.mobile-search-bar .ui-input__group {
+  flex: 1;
+  padding-left: 0;
+  width: 100%;
+}
+
+.mobile-search-bar .ui-input__input-pad-0 {
+  width: 100%;
+}
+
+.mobile-search-bar .ui-button {
+  padding: 10px;
+  margin-right: 4px;
+}
+
+.mobile-search-bar__buttons {
+  display: flex;
 }
