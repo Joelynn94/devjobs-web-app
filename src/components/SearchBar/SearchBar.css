@@ -1,10 +1,11 @@
 .search-bar {
   position: relative;
   display: flex;
+  justify-content: space-around;
   padding: 10px;
   background: var(--secondary);
   margin-top: -25px;
   border-radius: 6px;
-  justify-content: space-between;
   align-items: center;
+  height: 60px;
 }

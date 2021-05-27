@@ -1,10 +1,10 @@
 .location-input::after {
   content: '';
   position: absolute;
-  top: -14px;
+  top: -17px;
   right: 0px;
   width: 1px;
-  height: 76px;
+  height: 81px;
   opacity: 0.2;
   background-color: var(--tertiary);
 }
