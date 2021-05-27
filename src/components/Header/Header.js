@@ -8,7 +8,7 @@ import './Header.css';
 import ToggleSwitch from '../ToggleSwitch/ToggleSwitch';
 import Container from '../Container/Container';
 
-const TopNavbar = ({ windowWidth }) => {
+const TopNavbar = ({ windowWidth, onThemeChange }) => {
   const [backgroundImage, setBackgroundImage] = useState('');
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const TopNavbar = ({ windowWidth }) => {
     >
       <Container>
         <Logo />
-        <ToggleSwitch />
+        <ToggleSwitch onThemeChange={onThemeChange} />
       </Container>
     </header>
   );

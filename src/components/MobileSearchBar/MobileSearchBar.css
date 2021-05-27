@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   padding: 10px;
-  background: var(--secondary);
+  background: var(--light-background);
   margin-top: -25px;
   border-radius: 6px;
   align-items: center;
@@ -22,6 +22,10 @@
 .mobile-search-bar .ui-button {
   padding: 10px;
   margin-right: 4px;
+}
+
+.mobile-search-bar .btn--default {
+  background-color: transparent;
 }
 
 .mobile-search-bar__buttons {

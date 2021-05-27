@@ -24,19 +24,19 @@
 /* CUSTOM BUTTON STYLES */
 
 .btn--default {
-  background-color: var(--default);
-  color: var(--secondary);
+  background-color: var(--dark-background);
+  color: var(--secondary-button-background);
 }
 
 .btn--default:hover {
-  background-color: var(--default);
-  border: 2px solid var(--default);
+  background-color: var(--dark-background);
+  border: 2px solid var(--dark-background);
   color: var(--dark);
 }
 
 .btn--primary {
   background-color: var(--primary);
-  color: var(--secondary);
+  color: var(--secondary-button-background);
 }
 
 .btn--primary:hover {
@@ -44,17 +44,17 @@
 }
 
 .btn--secondary {
-  background-color: var(--secondary);
+  background-color: var(--secondary-button-background);
   color: var(--alt-text);
 }
 
 .btn--secondary:hover {
-  background-color: var(--secondary-hover);
+  background-color: var(--secondary-button-hover);
 }
 
 .btn--danger {
   background-color: var(--danger);
-  color: var(--secondary);
+  color: var(--danger);
 }
 
 .btn--danger:hover {
@@ -63,7 +63,7 @@
 
 .btn--success {
   background-color: var(--success);
-  color: var(--secondary);
+  color: var(--success);
 }
 
 .btn--success:hover {
@@ -72,7 +72,7 @@
 
 .btn--dark {
   background-color: var(--dark);
-  color: var(--secondary);
+  color: var(--light-text);
 }
 .btn--dark:hover {
   background-color: var(--dark-hover);

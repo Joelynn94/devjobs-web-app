@@ -2,21 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
 :root {
-  /* App color palette */
-  --default: #f4f6f8;
-  --primary: #5964e0;
-  --primary-accent: #939bf4;
-  --primary-secondary: #19202d;
-  --primary-secondary-accent: #121721;
-  --secondary: #ffffff;
-  --secondary-accent: #f4f6f8;
-  --tertiary: #9daec2;
-  --tertiary-accent: #6e8098;
-  --danger: #ff293b;
-  --danger-hover: #ff6976;
-  --success: #258c53;
-  --success-hover: #7cba98;
-
   /* Font Family */
   --font-family: 'Kumbh Sans', sans-serif;
 
@@ -49,12 +34,53 @@
   --screen-xl: 1200px;
 }
 
+.theme-light {
+  --primary: #5964e0;
+  --primary-accent: #939bf4;
+  --dark-text: #19202d;
+  --light-text: #8c8f96;
+  --accent-text: #5964e0;
+  --dark-background: #f4f6f8;
+  --light-background: #ffffff;
+  --button-background: #5964e0;
+  --button-hover: #939bf4;
+  --secondary-button-background: #eef0fc;
+  --secondary-button-hover: #c5c9f4;
+  --tertiary: #9daec2;
+  --tertiary-accent: #6e8098;
+  --danger: #ff293b;
+  --danger-hover: #ff6976;
+  --success: #258c53;
+  --success-hover: #7cba98;
+}
+
+.theme-dark {
+  --primary: #5964e0;
+  --primary-accent: #939bf4;
+  --dark-text: #6e8098;
+  --light-text: #ffffff;
+  --accent-text: #5964e0;
+  --dark-background: #19202d;
+  --light-background: #121721;
+  --button-background: #5964e0;
+  --button-hover: #939bf4;
+  --secondary-button-background: #303642;
+  --secondary-button-hover: #696e76;
+  --tertiary: #9daec2;
+  --tertiary-accent: #6e8098;
+  --danger: #ff293b;
+  --danger-hover: #ff6976;
+  --success: #258c53;
+  --success-hover: #7cba98;
+}
+
 body,
 html {
   margin: 0;
   padding: 0;
   font-family: var(--font-family);
-  background-color: var(--default);
+  background-color: var(--dark-background);
+  color: var(--light-text);
 }
 
 img {

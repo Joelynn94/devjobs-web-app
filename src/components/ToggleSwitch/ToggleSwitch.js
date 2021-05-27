@@ -4,11 +4,17 @@ import moonIcon from '../../assets/desktop/icon-moon.svg';
 
 import './ToggleSwitch.css';
 
-const ToggleSwitch = () => {
+const ToggleSwitch = ({ onThemeChange }) => {
   const [isToggled, setIsToggled] = useState(false);
 
   const handleToggle = () => {
     setIsToggled(!isToggled);
+
+    if (!isToggled) {
+      onThemeChange();
+    } else {
+      onThemeChange();
+    }
   };
 
   return (

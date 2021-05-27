@@ -23,7 +23,7 @@
 .toggle-switch__switch {
   position: absolute;
   cursor: pointer;
-  background-color: var(--secondary);
+  background-color: var(--light-background);
   border-radius: 1rem;
   top: 0;
   right: 0;
@@ -57,5 +57,5 @@
 
 /* Change background of checkbox when checked */
 .toggle-switch input[type='checkbox']:checked + .toggle-switch__switch {
-  background-color: var(--primary-secondary);
+  background-color: var(--dark-background);
 }

@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-around;
   padding: 10px;
-  background: var(--secondary);
+  background: var(--light-background);
   margin-top: -25px;
   border-radius: 6px;
   align-items: center;
