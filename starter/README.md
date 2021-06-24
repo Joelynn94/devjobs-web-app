@@ -1,6 +1,6 @@
-# Frontend Mentor - GitHub Jobs API
+# Frontend Mentor - Devjobs web app
 
-![Design preview for the GitHub Jobs API coding challenge](./preview.jpg)
+![Design preview for the Devjobs web app coding challenge](./preview.jpg)
 
 ## Welcome! 👋
 
@@ -12,29 +12,19 @@ Thanks for purchasing this premium Frontend Mentor coding challenge.
 
 ## The challenge
 
-Your challenge is to build out this jobs board using the [GitHub Jobs API](https://jobs.github.com/api) data and get it looking as close to the design as possible.
+Your challenge is to build out this jobs board using a local `data.json` to retrieve the data. Your goal is to try to get your project looking as close to the design as possible.
 
 You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
+
+We provide the data in a local `data.json` file, so use that to populate the content on the first load. If you want to take it up a notch, feel free to build this as a full-stack application!
 
 Your users should be able to:
 
 - View the optimal layout for each page depending on their device's screen size
 - See hover states for all interactive elements throughout the site
-- View all jobs currently live on the GitHub Jobs API
+- Be able to filter jobs on the index page by title, location, and whether a job is for a full-time position
 - Be able to click a job from the index page so that they can read more information and apply for the job
 - **Bonus**: Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` in CSS.
-
-⚠️ **IMPORTANT** ⚠️: The GitHub Jobs API will throw a CORS error when you try to pull data from it in your project. To avoid this, you can use [cors.bridged.cc](https://app.cors.bridged.cc/). This allows you to prefix your request URL with `https://cors.bridged.cc/` and the request will come back as expected. So, if you wanted to request all positions, your request would look something like this:
-
-```javascript
-fetch(
-  'https://cors.bridged.cc/https://jobs.github.com/positions.json'
-)
-  .then((res) => res.json())
-  .then((data) => console.log(data));
-```
-
-⚠️ **IMPORTANT** ⚠️: The "Full Time Only" param seems to have changed on the GitHub Jobs API. Instead of setting `full_time=true`, it seems like `full_time=on` is what you should set. Although the docs still say `full_time=true`.
 
 Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
 

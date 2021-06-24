@@ -37,7 +37,7 @@ function App() {
     setDarkTheme(!darkTheme);
   }
 
-  // changes classname of main div so css variables can be used
+  // changes classname of root html so css variables can be used
   darkTheme
     ? (document.documentElement.className = 'theme-dark')
     : (document.documentElement.className = 'theme-light');
@@ -51,6 +51,7 @@ function App() {
       />
       <Main>
         <Container>
+          {/* if the width is tablet size or larger, show searchbar, anything less, show mobile searchbar */}
           {windowWidth >= 768 ? <SearchBar /> : <MobileSearchBar />}
           <h1>Hello</h1>
         </Container>
