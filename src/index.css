@@ -20,6 +20,7 @@
   --line-height-h4: 1.125rem;
 
   /* Basic spacing */
+  --spacing-xs: 1rem;
   --spacing-sm: 1.875rem;
   --spacing-md: 2.5rem;
   --spacing-lg: 3.125rem;
@@ -45,8 +46,11 @@
   --light-background: #ffffff;
   --button-background: #5964e0;
   --button-hover: #939bf4;
+  --light-button-text: #ffffff;
   --secondary-button-background: #eef0fc;
   --secondary-button-hover: #c5c9f4;
+  --checkmark-background: #fdfdfd;
+  --checkmark-background-hover: #d5d8f7;
   --tertiary: #9daec2;
   --tertiary-accent: #6e8098;
   --danger: #ff293b;
@@ -66,8 +70,11 @@
   --light-background: #19202d;
   --button-background: #5964e0;
   --button-hover: #939bf4;
+  --light-button-text: #ffffff;
   --secondary-button-background: #303642;
   --secondary-button-hover: #696e76;
+  --checkmark-background: #313743;
+  --checkmark-background-hover: #3d4453;
   --tertiary: #9daec2;
   --tertiary-accent: #6e8098;
   --danger: #ff293b;

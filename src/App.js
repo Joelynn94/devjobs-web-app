@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Container from './components/Container/Container';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
+import Container from './components/Container/Container';
+import GridContainer from './components/GridContainer/GridContainer';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import SearchBar from './components/SearchBar/SearchBar';
 import MobileSearchBar from './components/MobileSearchBar/MobileSearchBar';
 import JobCard from './components/JobCard/JobCard';
-import './index.css';
 import SkeletonJob from './skeletons/SkeletonJob';
+import './index.css';
 
 function App() {
   const [darkTheme, setDarkTheme] = useState(
@@ -75,7 +76,9 @@ function App() {
         <Container>
           {/* if the screen width is tablet size or larger, show searchbar, anything less, show mobile searchbar */}
           {windowWidth >= 768 ? <SearchBar /> : <MobileSearchBar />}
-          {jobs && jobs.map((job) => <JobCard key={job.id} job={job} />)}
+          <GridContainer>
+            {jobs && jobs.map((job) => <JobCard key={job.id} job={job} />)}
+          </GridContainer>
           {isLoading && <SkeletonJob />}
         </Container>
       </Main>

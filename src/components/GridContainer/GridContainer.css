@@ -1,0 +1,20 @@
+.ui-grid-container {
+  display: grid;
+  gap: var(--spacing-lg);
+  grid-template-columns: 1fr;
+  margin-top: var(--spacing-xl);
+}
+
+@media (min-width: 768px) {
+  .ui-grid-container {
+    gap: var(--spacing-lg) var(--spacing-xs);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1200px) {
+  .ui-grid-container {
+    gap: var(--spacing-xl) var(--spacing-sm);
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

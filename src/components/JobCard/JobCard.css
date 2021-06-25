@@ -4,7 +4,7 @@
   border-radius: 6px;
   padding: var(--spacing-lg) var(--spacing-sm) var(--spacing-sm)
     var(--spacing-sm);
-  margin: var(--spacing-lg) auto;
+  text-decoration: none;
 }
 
 .job-card__top {

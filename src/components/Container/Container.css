@@ -1,6 +1,6 @@
 .ui-container {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: var(--spacing-xs);
+  padding-left: var(--spacing-xs);
   margin-right: auto;
   margin-left: auto;
 }
@@ -14,6 +14,8 @@
 @media (min-width: 768px) {
   .ui-container {
     max-width: 720px;
+    padding-right: var(--spacing-sm);
+    padding-left: var(--spacing-sm);
   }
 }
 

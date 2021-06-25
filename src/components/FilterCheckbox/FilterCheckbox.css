@@ -26,13 +26,13 @@
   position: absolute;
   height: 20px;
   width: 20px;
-  background-color: #e7e8e9;
+  background-color: var(--checkmark-background);
   border-radius: 4px;
 }
 
 /* On mouse-over, add a light purple background color */
 .ui-checkbox:hover input ~ .ui-checkbox--checkmark {
-  background-color: #d5d8f7;
+  background-color: var(--checkmark-background-hover);
 }
 
 /* When the checkbox is checked, add a dark purple background */

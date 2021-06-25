@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './JobCard.css';
 
 const JobCard = ({ job }) => {
   return (
-    <div className='job-card'>
+    <Link to={`job/${job.id}`} className='job-card'>
       <div
         className='job-card__top'
         style={{ backgroundColor: `${job.logoBackground}` }}
@@ -23,7 +24,7 @@ const JobCard = ({ job }) => {
       <div className='job-card__footer'>
         <h4 className='job-card__location'>{job.location}</h4>
       </div>
-    </div>
+    </Link>
   );
 };
 
