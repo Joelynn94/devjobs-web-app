@@ -14,7 +14,7 @@
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
-  color: var(--light-text);
+  color: var(--main-text);
   background-color: var(--light-background);
   border: 1px solid transparent;
   -webkit-appearance: none;
@@ -33,7 +33,7 @@
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.6;
-  color: var(--light-text);
+  color: var(--main-text);
   background-color: var(--light-background);
   border: 1px solid transparent;
   -webkit-appearance: none;

@@ -20,11 +20,11 @@
   --line-height-h4: 1.125rem;
 
   /* Basic spacing */
-  --padding-sm: 1.875rem;
-  --padding-md: 2.5rem;
-  --padding-lg: 3.125rem;
-  --padding-xl: 3.75rem;
-  --padding-2xl: 4.375rem;
+  --spacing-sm: 1.875rem;
+  --spacing-md: 2.5rem;
+  --spacing-lg: 3.125rem;
+  --spacing-xl: 3.75rem;
+  --spacing-2xl: 4.375rem;
 
   /* Screen sizes */
   --screen-xs: 300px;
@@ -37,7 +37,8 @@
 .theme-light {
   --primary: #5964e0;
   --primary-accent: #939bf4;
-  --dark-text: #19202d;
+  --main-text: #19202d;
+  --faded-text: #6e8098;
   --light-text: #8c8f96;
   --accent-text: #5964e0;
   --dark-background: #f4f6f8;
@@ -57,11 +58,12 @@
 .theme-dark {
   --primary: #5964e0;
   --primary-accent: #939bf4;
-  --dark-text: #6e8098;
+  --main-text: #ffffff;
+  --faded-text: #6e8098;
   --light-text: #ffffff;
   --accent-text: #5964e0;
-  --dark-background: #19202d;
-  --light-background: #121721;
+  --dark-background: #121721;
+  --light-background: #19202d;
   --button-background: #5964e0;
   --button-hover: #939bf4;
   --secondary-button-background: #303642;

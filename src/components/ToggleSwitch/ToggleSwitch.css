@@ -57,5 +57,5 @@
 
 /* Change background of checkbox when checked */
 .toggle-switch input[type='checkbox']:checked + .toggle-switch__switch {
-  background-color: var(--dark-background);
+  background-color: var(--light-background);
 }

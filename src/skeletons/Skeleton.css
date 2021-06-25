@@ -1,0 +1,53 @@
+/* Basic Styles */
+.skeleton {
+  background: #ddd;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+.skeleton.text {
+  width: 40%;
+  height: 12px;
+  margin-bottom: 15px;
+}
+
+.skeleton.title {
+  width: 60%;
+  height: 20px;
+  margin-bottom: 15px;
+}
+
+.skeleton.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.skeleton.thumbnail {
+  width: 50px;
+  height: 50px;
+}
+
+.skeleton-wrapper {
+  position: relative;
+  background-color: var(--light-background);
+  border-radius: 6px;
+  padding: var(--spacing-lg) var(--spacing-sm) var(--spacing-sm)
+    var(--spacing-sm);
+  margin: var(--spacing-lg) auto;
+}
+
+.skeleton-job__top {
+  position: absolute;
+  top: -25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skeleton-job__footer {
+  margin: var(--spacing-md) 0 0 0;
+}

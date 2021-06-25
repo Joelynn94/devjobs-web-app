@@ -6,15 +6,15 @@
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0px;
-  padding-top: var(--padding-md);
-  padding-bottom: var(--padding-md);
+  padding-top: var(--spacing-md);
+  padding-bottom: var(--spacing-md);
 }
 
 @media screen and (min-width: 768px) {
   .app-header {
     border-radius: 0px 0px 0px 100px;
-    padding-top: var(--padding-xl);
-    padding-bottom: var(--padding-xl);
+    padding-top: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
   }
 }
 
