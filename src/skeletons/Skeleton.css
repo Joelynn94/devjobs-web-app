@@ -1,6 +1,6 @@
 /* Basic Styles */
 .skeleton {
-  background: #ddd;
+  background: var(--faded-text);
   margin: 10px 0;
   border-radius: 4px;
 }
@@ -35,6 +35,7 @@
   padding: var(--spacing-lg) var(--spacing-sm) var(--spacing-sm)
     var(--spacing-sm);
   margin: var(--spacing-lg) auto;
+  overflow: hidden;
 }
 
 .skeleton-job__top {
@@ -50,4 +51,37 @@
 
 .skeleton-job__footer {
   margin: var(--spacing-md) 0 0 0;
+}
+
+/* Animation effect */
+.shimmer-wrapper {
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  bottom: 0;
+  width: 100%;
+  animation: loading 4s infinite;
+}
+
+.shimmer {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: skewX(-10deg);
+}
+
+.theme-dark .shimmer {
+  background: rgba(25, 32, 45, 0.5);
+}
+
+@keyframes loading {
+  0% {
+    transform: translateX(-150%);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(110%);
+  }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import Shimmer from './Shimmer';
 import SkeletonElement from './SkeletonElement';
 
 const SkeletonJob = () => {
@@ -17,6 +18,7 @@ const SkeletonJob = () => {
           <SkeletonElement type='title' />
         </div>
       </div>
+      <Shimmer />
     </div>
   );
 };
