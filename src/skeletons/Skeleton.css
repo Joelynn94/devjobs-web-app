@@ -59,15 +59,15 @@
 /* Animation effect */
 .shimmer-wrapper {
   position: absolute;
-  top: 0;
+  top: 25px;
   left: -25px;
   bottom: 0;
   width: 100%;
-  animation: loading 4s infinite;
+  animation: loading 3s infinite;
 }
 
 .shimmer {
-  width: 100%;
+  width: 60%;
   height: 100%;
   background: rgba(255, 255, 255, 0.2);
   transform: skewX(-10deg);
