@@ -5,12 +5,7 @@ import moonIcon from '../../assets/desktop/icon-moon.svg';
 import './ToggleSwitch.css';
 
 const ToggleSwitch = ({ onThemeChange }) => {
-  const [isToggled, setIsToggled] = useState(false);
-
   const handleToggle = () => {
-    setIsToggled(!isToggled);
-
-    // toggle theme class
     onThemeChange();
   };
 
@@ -21,7 +16,6 @@ const ToggleSwitch = ({ onThemeChange }) => {
         <input
           className='toggle-switch__checkbox'
           type='checkbox'
-          checked={isToggled}
           onChange={handleToggle}
         />
         <span className='toggle-switch__switch'></span>

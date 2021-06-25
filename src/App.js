@@ -13,17 +13,21 @@ import './index.css';
 
 function App() {
   const [darkTheme, setDarkTheme] = useState(
-    () => localStorage.getItem('dark_theme') === 'true'
+    () => localStorage.getItem('dark_theme') === 'false'
   );
-  const [windowWidth, setWindowWidth] = useState(0);
+  const [windowWidth, setWindowWidth] = useState(() =>
+    localStorage.getItem('window_size')
+  );
   const [jobs, setJobs] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     // call the handlewindowresize function when the window is resized
     window.addEventListener('resize', handleWindowResize);
-    // immediately set the dark theme on page render and every theme change
+    // immediately set the dark theme on page render and every theme changes
     localStorage.setItem('dark_theme', darkTheme);
+    // immediately set the window size on page render and every window size changes
+    localStorage.setItem('window_size', windowWidth);
 
     // changes classname of root html so css variables can be used
     darkTheme
