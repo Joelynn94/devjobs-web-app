@@ -28,11 +28,11 @@
   height: 50px;
 }
 
-.wrap {
+.skeleton-wrapper {
   overflow: hidden;
 }
 
-.skeleton-wrapper {
+.skeleton-job {
   background-color: var(--light-background);
   border-radius: 6px;
   padding: var(--spacing-lg) var(--spacing-sm) var(--spacing-sm)
@@ -59,7 +59,7 @@
 /* Animation effect */
 .shimmer-wrapper {
   position: absolute;
-  top: -25px;
+  top: 0;
   left: -25px;
   bottom: 0;
   width: 100%;
@@ -69,12 +69,12 @@
 .shimmer {
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
   transform: skewX(-10deg);
 }
 
 .theme-dark .shimmer {
-  background: rgba(25, 32, 45, 0.5);
+  background: rgba(25, 32, 45, 0.1);
 }
 
 @keyframes loading {
