@@ -10,11 +10,8 @@ const ToggleSwitch = ({ onThemeChange }) => {
   const handleToggle = () => {
     setIsToggled(!isToggled);
 
-    if (!isToggled) {
-      onThemeChange();
-    } else {
-      onThemeChange();
-    }
+    // toggle theme class
+    onThemeChange();
   };
 
   return (

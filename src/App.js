@@ -12,7 +12,7 @@ import SkeletonJob from './skeletons/SkeletonJob';
 
 function App() {
   const [darkTheme, setDarkTheme] = useState(
-    () => localStorage.getItem('dark_theme') === 'false'
+    () => localStorage.getItem('dark_theme') === 'true'
   );
   const [windowWidth, setWindowWidth] = useState(0);
   const [jobs, setJobs] = useState([]);
