@@ -5,7 +5,7 @@ import moonIcon from '../../assets/desktop/icon-moon.svg';
 import './ToggleSwitch.css';
 
 const ToggleSwitch = ({ onThemeChange }) => {
-  const handleToggle = () => {
+  const handleThemeToggle = () => {
     onThemeChange();
   };
 
@@ -16,7 +16,7 @@ const ToggleSwitch = ({ onThemeChange }) => {
         <input
           className='toggle-switch__checkbox'
           type='checkbox'
-          onChange={handleToggle}
+          onChange={handleThemeToggle}
         />
         <span className='toggle-switch__switch'></span>
       </label>

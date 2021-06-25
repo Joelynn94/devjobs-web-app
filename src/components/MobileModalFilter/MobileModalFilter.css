@@ -1,0 +1,48 @@
+.mobile-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.mobile-modal__content {
+  border-radius: 6px;
+  background-color: var(--light-background);
+  text-align: center;
+  width: 90%;
+}
+
+.mobile-modal__top {
+  border-bottom: 1px solid var(--tertiary);
+  padding: 10px 24px;
+}
+
+.mobile-modal .ui-input__input {
+  padding: 10px 40px;
+}
+
+.mobile-modal__bottom {
+  padding: 24px;
+}
+
+.mobile-modal .ui-checkbox {
+  width: 100%;
+  display: flex;
+  padding: 0 0 24px 0;
+}
+
+.mobile-modal .ui-checkbox__text {
+  margin-left: 32px;
+  color: var(--main-text);
+}
+
+.mobile-modal .btn--primary {
+  width: 100%;
+}
