@@ -2,13 +2,13 @@ import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Container from './components/Container/Container';
-import GridContainer from './components/GridContainer/GridContainer';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import SearchBar from './components/SearchBar/SearchBar';
 import MobileSearchBar from './components/MobileSearchBar/MobileSearchBar';
-import JobCard from './components/JobCard/JobCard';
-import SkeletonJob from './skeletons/SkeletonJob';
+import HomePage from './pages/HomePage/HomePage';
+import JobDetailPage from './pages/JobDetailPage/JobDetailPage';
+import SearchPage from './pages/SearchPage/SearchPage';
 import './index.css';
 
 function App() {
@@ -18,8 +18,6 @@ function App() {
   const [windowWidth, setWindowWidth] = useState(() =>
     localStorage.getItem('window_size')
   );
-  const [jobs, setJobs] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     // call the handlewindowresize function when the window is resized
@@ -42,23 +40,6 @@ function App() {
     // dependant on the windowWidth state and darkTheme state
   }, [windowWidth, darkTheme]);
 
-  useEffect(() => {
-    setIsLoading(true);
-    fetch('./data.json')
-      .then((response) => response.json())
-      .then((data) => {
-        if (data) {
-          setJobs(data);
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-      })
-      .finally(() => {
-        // setIsLoading(false);
-      });
-  }, []);
-
   // function to set the windowWidth state
   function handleWindowResize() {
     setWindowWidth(window.innerWidth);
@@ -80,10 +61,17 @@ function App() {
         <Container>
           {/* if the screen width is tablet size or larger, show searchbar, anything less, show mobile searchbar */}
           {windowWidth >= 768 ? <SearchBar /> : <MobileSearchBar />}
-          <GridContainer>
-            {jobs && jobs.map((job) => <JobCard key={job.id} job={job} />)}
-          </GridContainer>
-          {isLoading && <SkeletonJob />}
+          <Switch>
+            <Route exact path='/'>
+              <HomePage />
+            </Route>
+            <Route exact path='/jobs/:id'>
+              <JobDetailPage />
+            </Route>
+            {/* <Route exact path='/search'>
+              <SearchPage />
+            </Route> */}
+          </Switch>
         </Container>
       </Main>
     </Router>

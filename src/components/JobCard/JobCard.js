@@ -5,7 +5,7 @@ import './JobCard.css';
 
 const JobCard = ({ job }) => {
   return (
-    <Link to={`job/${job.id}`} className='job-card'>
+    <Link to={`jobs/${job.id}`} className='job-card'>
       <div
         className='job-card__top'
         style={{ backgroundColor: `${job.logoBackground}` }}
