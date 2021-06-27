@@ -8,6 +8,7 @@
   border-radius: 0px;
   padding-top: var(--spacing-md);
   padding-bottom: var(--spacing-md);
+  margin-bottom: 10px;
 }
 
 @media screen and (min-width: 768px) {

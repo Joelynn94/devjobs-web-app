@@ -1,34 +1,21 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+
+import SearchBar from '../../components/SearchBar/SearchBar';
+import MobileSearchBar from '../../components/MobileSearchBar/MobileSearchBar';
 import JobCard from '../../components/JobCard/JobCard';
 import SkeletonJob from '../../skeletons/SkeletonJob';
 import GridContainer from '../../components/GridContainer/GridContainer';
 
-const HomePage = () => {
-  const [jobs, setJobs] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
-
-  useEffect(() => {
-    setIsLoading(true);
-    fetch('./data.json')
-      .then((response) => response.json())
-      .then((data) => {
-        if (data) {
-          setJobs(data);
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-      })
-      .finally(() => {
-        // setIsLoading(false);
-      });
-  }, []);
-
+const HomePage = ({ jobs, isLoading, windowWidth }) => {
   return (
-    <GridContainer>
-      {jobs && jobs.map((job) => <JobCard key={job.id} job={job} />)}
-      {isLoading && <SkeletonJob />}
-    </GridContainer>
+    <>
+      {/* if the screen width is tablet size or larger, show searchbar, anything less, show mobile searchbar */}
+      {windowWidth >= 768 ? <SearchBar /> : <MobileSearchBar />}
+      <GridContainer>
+        {jobs && jobs.map((job) => <JobCard key={job.id} job={job} />)}
+        {isLoading && <SkeletonJob />}
+      </GridContainer>
+    </>
   );
 };
 

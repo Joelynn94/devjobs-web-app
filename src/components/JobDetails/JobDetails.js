@@ -1,0 +1,45 @@
+import React from 'react';
+
+import Button from '../Button/Button';
+import './JobDetails.css';
+
+const JobDetails = ({ currentJob }) => {
+  return (
+    <div className='job-details'>
+      <div className='job-details__top'>
+        <p className='job-details__posted'>
+          {currentJob.postedAt}
+          <span className='job-details__posted-oval'></span>
+          {currentJob.contract}
+        </p>
+        <h3 className='job-details__position'>{currentJob.position}</h3>
+        <h4 className='job-details__location'>{currentJob.location}</h4>
+        <div className='job-details__apply'>
+          <Button buttonStyle={'btn--primary'}>Apply Now</Button>
+        </div>
+      </div>
+      <div className='job-details__body'>
+        <div className='job-details__description'>
+          <p className='job-details__description-para'>
+            {currentJob.description}
+          </p>
+        </div>
+        <div className='job-details__requirements'>
+          <h3 className='job-details__requirements-heading'>Requirements</h3>
+          <p className='job-details__requirements-para'>
+            {currentJob.requirements.content}
+          </p>
+          <ul className='job-details__requirements-list'>
+            {currentJob.requirements.items.map((item, index) => (
+              <li className='job-details__requirements-item' key={index}>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default JobDetails;

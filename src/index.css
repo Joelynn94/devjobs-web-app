@@ -22,7 +22,7 @@
   /* Basic spacing */
   --spacing-xs: 1rem;
   --spacing-sm: 1.875rem;
-  --spacing-md: 2.5rem;
+  --spacing-md: 2.45rem;
   --spacing-lg: 3.125rem;
   --spacing-xl: 3.75rem;
   --spacing-2xl: 4.375rem;
@@ -90,6 +90,10 @@ html {
   font-family: var(--font-family);
   background-color: var(--dark-background);
   color: var(--light-text);
+}
+
+p {
+  line-height: var(--line-height-body);
 }
 
 img {

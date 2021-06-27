@@ -1,9 +1,6 @@
 .ui-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
-  padding: 10px 35px;
+  padding: 10px 20px;
   border-radius: 5px;
   border: 2px solid transparent;
   transition: transform 0.3s ease;
@@ -43,9 +40,14 @@
   background-color: var(--primary-accent);
 }
 
+.theme-dark .btn--secondary {
+  background-color: var(--secondary-button-background);
+  color: var(--light-text);
+}
+
 .btn--secondary {
   background-color: var(--secondary-button-background);
-  color: var(--alt-text);
+  color: var(--accent-text);
 }
 
 .btn--secondary:hover {
