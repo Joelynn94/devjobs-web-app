@@ -27,13 +27,14 @@ const JobDetails = ({ currentJob }) => {
         <div className='job-details__requirements'>
           <h3 className='job-details__requirements-heading'>Requirements</h3>
           <p className='job-details__requirements-para'>
-            {currentJob.requirements.content}
+            {currentJob?.requirements.content}
           </p>
           <ul className='job-details__requirements-list'>
             {currentJob.requirements.items.map((item, index) => (
-              <li className='job-details__requirements-item' key={index}>
-                {item}
-              </li>
+              <div className='job-details__requirements-wrapper' key={index}>
+                <span className='job-details__requirements-oval'></span>
+                <li className='job-details__requirements-item'>{item}</li>
+              </div>
             ))}
           </ul>
         </div>

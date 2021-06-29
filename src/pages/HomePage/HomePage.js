@@ -6,13 +6,16 @@ import JobCard from '../../components/JobCard/JobCard';
 import SkeletonJob from '../../skeletons/SkeletonJob';
 import GridContainer from '../../components/GridContainer/GridContainer';
 
-const HomePage = ({ jobs, isLoading, windowWidth }) => {
+const HomePage = ({ jobs, isLoading, windowWidth, setCurrentJob }) => {
   return (
     <>
       {/* if the screen width is tablet size or larger, show searchbar, anything less, show mobile searchbar */}
       {windowWidth >= 768 ? <SearchBar /> : <MobileSearchBar />}
       <GridContainer>
-        {jobs && jobs.map((job) => <JobCard key={job.id} job={job} />)}
+        {jobs &&
+          jobs.map((job) => (
+            <JobCard key={job.id} job={job} setCurrentJob={setCurrentJob} />
+          ))}
         {isLoading && <SkeletonJob />}
       </GridContainer>
     </>

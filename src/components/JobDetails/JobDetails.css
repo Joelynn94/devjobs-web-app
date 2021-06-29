@@ -40,9 +40,26 @@
 }
 
 .job-details__requirements-list {
+  list-style-type: none;
   margin-top: var(--spacing-md);
+  padding: 0;
+}
+
+.job-details__requirements-wrapper {
+  display: grid;
+  align-items: baseline;
+  grid-template-columns: 1fr 10fr;
 }
 
 .job-details__requirements-item {
-  margin: 8px 0;
+  display: flex;
+  margin: 8px 1rem 0 0;
+}
+
+.job-details__requirements-oval {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--primary);
 }

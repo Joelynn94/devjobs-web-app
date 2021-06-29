@@ -16,6 +16,7 @@ function App() {
   const [windowWidth, setWindowWidth] = useState(() =>
     localStorage.getItem('window_size')
   );
+  const [currentJob, setCurrentJob] = useState({});
   const [jobs, setJobs] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -83,10 +84,17 @@ function App() {
                 isLoading={isLoading}
                 windowWidth={windowWidth}
                 setIsLoading={setIsLoading}
+                currentJob={currentJob}
+                setCurrentJob={setCurrentJob}
               />
             </Route>
             <Route exact path='/jobs/:id'>
-              <JobDetailPage jobs={jobs} setIsLoading={setIsLoading} />
+              <JobDetailPage
+                jobs={jobs}
+                setIsLoading={setIsLoading}
+                currentJob={currentJob}
+                setCurrentJob={setCurrentJob}
+              />
             </Route>
             {/* <Route exact path='/search'>
               <SearchPage />

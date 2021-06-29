@@ -3,9 +3,13 @@ import { Link } from 'react-router-dom';
 
 import './JobCard.css';
 
-const JobCard = ({ job }) => {
+const JobCard = ({ job, setCurrentJob }) => {
   return (
-    <Link to={`jobs/${job.id}`} className='job-card'>
+    <Link
+      to={`jobs/${job.id}`}
+      className='job-card'
+      onClick={(e) => setCurrentJob(job)}
+    >
       <div
         className='job-card__top'
         style={{ backgroundColor: `${job.logoBackground}` }}

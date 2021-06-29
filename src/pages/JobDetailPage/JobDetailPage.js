@@ -3,14 +3,15 @@ import { useParams } from 'react-router-dom';
 import JobBanner from '../../components/JobBanner/JobBanner';
 import JobDetails from '../../components/JobDetails/JobDetails';
 
-const JobDetailPage = ({ jobs }) => {
+const JobDetailPage = ({ jobs, currentJob, setCurrentJob }) => {
   const params = useParams();
   const id = Number.parseInt(params.id, 10);
-  const [currentJob, setCurrentJob] = useState({});
 
   useEffect(() => {
     setCurrentJob(jobs.find((job) => job.id === id));
   }, [jobs]);
+
+  console.log(currentJob);
 
   return (
     <>
