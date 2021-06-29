@@ -90,6 +90,7 @@ html {
   font-family: var(--font-family);
   background-color: var(--dark-background);
   color: var(--light-text);
+  padding-bottom: var(--spacing-xl);
 }
 
 p {

@@ -24,7 +24,7 @@ const JobDetails = ({ currentJob }) => {
             {currentJob.description}
           </p>
         </div>
-        <div className='job-details__requirements'>
+        <section className='job-details__requirements'>
           <h3 className='job-details__requirements-heading'>Requirements</h3>
           <p className='job-details__requirements-para'>
             {currentJob?.requirements.content}
@@ -37,7 +37,19 @@ const JobDetails = ({ currentJob }) => {
               </div>
             ))}
           </ul>
-        </div>
+        </section>
+        <section className='job-details__role'>
+          <h3 className='job-details__role-heading'>What You Will Do</h3>
+          <p className='job-details__role-para'>{currentJob?.role.content}</p>
+          <ul className='job-details__role-list'>
+            {currentJob.role.items.map((item, index) => (
+              <div className='job-details__role-wrapper' key={index}>
+                <span className='job-details__role-oval'></span>
+                <li className='job-details__role-item'>{item}</li>
+              </div>
+            ))}
+          </ul>
+        </section>
       </div>
     </div>
   );
