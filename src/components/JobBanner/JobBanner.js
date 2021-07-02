@@ -18,7 +18,9 @@ const JobBanner = ({ currentJob }) => {
           <h3 className='job-banner__company'>{currentJob.company}</h3>
           <p className='job-banner__website'>{currentJob.website}</p>
         </div>
-        <Button buttonStyle={'btn--secondary'}>Company Site</Button>
+        <div className='job-banner__btn'>
+          <Button buttonStyle={'btn--secondary'}>Company Site</Button>
+        </div>
       </div>
     </div>
   );

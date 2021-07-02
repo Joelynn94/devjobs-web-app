@@ -7,13 +7,15 @@ const JobDetails = ({ currentJob }) => {
   return (
     <div className='job-details'>
       <div className='job-details__top'>
-        <p className='job-details__posted'>
-          {currentJob.postedAt}
-          <span className='job-details__posted-oval'></span>
-          {currentJob.contract}
-        </p>
-        <h3 className='job-details__position'>{currentJob.position}</h3>
-        <h4 className='job-details__location'>{currentJob.location}</h4>
+        <div className='job-details__info'>
+          <p className='job-details__posted'>
+            {currentJob.postedAt}
+            <span className='job-details__posted-oval'></span>
+            {currentJob.contract}
+          </p>
+          <h3 className='job-details__position'>{currentJob.position}</h3>
+          <h4 className='job-details__location'>{currentJob.location}</h4>
+        </div>
         <div className='job-details__apply'>
           <Button buttonStyle={'btn--primary'}>Apply Now</Button>
         </div>

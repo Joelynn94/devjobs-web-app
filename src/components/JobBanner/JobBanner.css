@@ -52,14 +52,14 @@
 
 @media (min-width: 768px) {
   .job-banner__details {
-    padding: var(--spacing-xs) var(--spacing-md);
+    padding: var(--spacing-xs) var(--spacing-sm);
     display: grid;
-    grid-template-columns: 4fr 2fr;
+    grid-template-columns: 3fr 2fr;
   }
 
-  .job-banner__details .ui-button {
-    display: flex;
+  .job-banner__btn {
     align-self: center;
+    justify-self: end;
   }
 }
 

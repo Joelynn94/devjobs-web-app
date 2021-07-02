@@ -5,16 +5,27 @@
   margin-bottom: var(--spacing-xl);
 }
 
-.job-details__position {
-  color: var(--main-text);
+@media (min-width: 768px) {
+  .job-details__top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+  }
 }
 
 .job-details__posted {
   color: var(--faded-text);
+  margin-bottom: 0;
+}
+
+.job-details__position {
+  color: var(--main-text);
+  margin: 8px 0 8px 0;
 }
 
 .job-details__location {
   color: var(--accent-text);
+  margin-top: 0;
 }
 
 .job-details__posted-oval {
@@ -30,6 +41,13 @@
   width: 100%;
   margin-top: var(--spacing-sm);
   margin-bottom: var(--spacing-sm);
+}
+
+@media (min-width: 768px) {
+  .job-details__apply {
+    width: 150px;
+    justify-self: end;
+  }
 }
 
 .job-details__requirements {
@@ -57,7 +75,7 @@
 .job-details__role-wrapper {
   display: grid;
   align-items: baseline;
-  grid-template-columns: 1fr 10fr;
+  grid-template-columns: 0.75fr 10fr;
 }
 
 .job-details__requirements-item,

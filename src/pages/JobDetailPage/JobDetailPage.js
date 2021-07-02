@@ -22,7 +22,7 @@ const JobDetailPage = ({ jobs, currentJob, setCurrentJob }) => {
         <JobBanner currentJob={currentJob} />
         <JobDetails currentJob={currentJob} />
       </Container>
-      <JobApply />
+      <JobApply currentJob={currentJob} />
     </>
   );
 };

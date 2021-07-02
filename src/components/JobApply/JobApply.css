@@ -1,14 +1,63 @@
-.job-apply {
-  display: flex;
-  justify-content: center;
+.job-apply__wrapper {
+  background-color: var(--light-background);
+  padding: var(--spacing-sm);
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: var(--light-background);
-  padding: var(--spacing-sm);
-  margin-top: var(--spacing-xl);
 }
 
-.job-apply .ui-button {
+.job-apply {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .job-apply {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .job-apply {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    align-items: center;
+  }
+}
+
+.job-apply__details {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .job-apply__details {
+    display: block;
+  }
+}
+
+.job-apply__position {
+  margin: 8px 0 8px 0;
+  color: var(--main-text);
+}
+
+.job-apply__company {
+  margin: 0;
+  color: var(--faded-text);
+}
+
+.job-apply__btn {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .job-apply__btn {
+    width: 150px;
+    justify-self: end;
+  }
+}
+
+.job-apply__btn .ui-button {
   width: 100%;
 }
