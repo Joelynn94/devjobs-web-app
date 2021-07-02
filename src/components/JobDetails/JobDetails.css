@@ -2,6 +2,7 @@
   border-radius: 6px;
   background-color: var(--light-background);
   padding: var(--spacing-md) var(--spacing-sm);
+  margin-bottom: var(--spacing-xl);
 }
 
 .job-details__position {

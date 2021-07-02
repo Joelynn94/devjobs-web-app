@@ -1,0 +1,14 @@
+.job-apply {
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--light-background);
+  padding: var(--spacing-sm);
+  margin-top: var(--spacing-xl);
+}
+
+.job-apply .ui-button {
+  width: 100%;
+}

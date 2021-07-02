@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import Container from './components/Container/Container';
 import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import HomePage from './pages/HomePage/HomePage';
@@ -76,31 +75,29 @@ function App() {
         onThemeChange={handleThemeChange}
       />
       <Main>
-        <Container>
-          <Switch>
-            <Route exact path='/'>
-              <HomePage
-                jobs={jobs}
-                isLoading={isLoading}
-                windowWidth={windowWidth}
-                setIsLoading={setIsLoading}
-                currentJob={currentJob}
-                setCurrentJob={setCurrentJob}
-              />
-            </Route>
-            <Route exact path='/jobs/:id'>
-              <JobDetailPage
-                jobs={jobs}
-                setIsLoading={setIsLoading}
-                currentJob={currentJob}
-                setCurrentJob={setCurrentJob}
-              />
-            </Route>
-            {/* <Route exact path='/search'>
+        <Switch>
+          <Route exact path='/'>
+            <HomePage
+              jobs={jobs}
+              isLoading={isLoading}
+              windowWidth={windowWidth}
+              setIsLoading={setIsLoading}
+              currentJob={currentJob}
+              setCurrentJob={setCurrentJob}
+            />
+          </Route>
+          <Route exact path='/jobs/:id'>
+            <JobDetailPage
+              jobs={jobs}
+              setIsLoading={setIsLoading}
+              currentJob={currentJob}
+              setCurrentJob={setCurrentJob}
+            />
+          </Route>
+          {/* <Route exact path='/search'>
               <SearchPage />
             </Route> */}
-          </Switch>
-        </Container>
+        </Switch>
       </Main>
     </Router>
   );

@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+
+import Container from '../../components/Container/Container';
+import JobApply from '../../components/JobApply/JobApply';
 import JobBanner from '../../components/JobBanner/JobBanner';
 import JobDetails from '../../components/JobDetails/JobDetails';
 
@@ -15,8 +18,11 @@ const JobDetailPage = ({ jobs, currentJob, setCurrentJob }) => {
 
   return (
     <>
-      <JobBanner currentJob={currentJob} />
-      <JobDetails currentJob={currentJob} />
+      <Container>
+        <JobBanner currentJob={currentJob} />
+        <JobDetails currentJob={currentJob} />
+      </Container>
+      <JobApply />
     </>
   );
 };
