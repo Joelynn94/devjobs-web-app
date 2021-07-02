@@ -6,12 +6,26 @@ import Button from '../Button/Button';
 
 import './SearchBar.css';
 
-const SearchBar = ({ isChecked, onCheckboxChange }) => {
-  console.log(isChecked);
+const SearchBar = ({
+  isChecked,
+  onCheckboxChange,
+  searchTerm,
+  onSearchInputChange,
+  onFormSubmit,
+  searchLocation,
+  onLocationInputChange,
+}) => {
   return (
-    <form className='search-bar'>
-      <SearchInput />
-      <SearchLocation style={{ borderLeft: '1px solid grey' }} />
+    <form className='search-bar' onSubmit={onFormSubmit}>
+      <SearchInput
+        searchTerm={searchTerm}
+        onSearchInputChange={onSearchInputChange}
+      />
+      <SearchLocation
+        style={{ borderLeft: '1px solid grey' }}
+        searchLocation={searchLocation}
+        onLocationInputChange={onLocationInputChange}
+      />
       <FilterCheckbox
         label='Full-Time'
         isChecked={isChecked}

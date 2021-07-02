@@ -5,7 +5,6 @@ import Header from './components/Header/Header';
 import Main from './components/Main/Main';
 import HomePage from './pages/HomePage/HomePage';
 import JobDetailPage from './pages/JobDetailPage/JobDetailPage';
-import SearchPage from './pages/SearchPage/SearchPage';
 import './index.css';
 
 function App() {
@@ -94,9 +93,6 @@ function App() {
               setCurrentJob={setCurrentJob}
             />
           </Route>
-          {/* <Route exact path='/search'>
-              <SearchPage />
-            </Route> */}
         </Switch>
       </Main>
     </Router>

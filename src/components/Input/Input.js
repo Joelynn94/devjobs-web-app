@@ -16,12 +16,10 @@ const Input = ({
 
   function handleFocus() {
     setFocused(true);
-    console.log(focused);
   }
 
   function handleBlur() {
     setFocused(false);
-    console.log(focused);
   }
 
   const conditionalClasses = clsx({
@@ -59,6 +57,7 @@ const Input = ({
             onChange={onChange}
             onFocus={handleFocus}
             onBlur={handleBlur}
+            value={value}
             {...otherProps}
           />
           <small className='ui-input__helper-text'>{helperText}</small>
@@ -71,6 +70,7 @@ const Input = ({
             onChange={onChange}
             onFocus={handleFocus}
             onBlur={handleBlur}
+            value={value}
             {...otherProps}
           />
           <small className='ui-input__helper-text'>{helperText}</small>
