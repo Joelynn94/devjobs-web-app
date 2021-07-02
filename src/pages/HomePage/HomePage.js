@@ -21,18 +21,14 @@ const HomePage = ({ jobs, isLoading, windowWidth, setCurrentJob }) => {
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
     setIsFullTime(!isFullTime);
+
+    if (!isFullTime) {
+      setFilteredJobs(jobs.filter((job) => job.contract === 'Full Time'));
+    }
   };
 
   const handleSearchInputChange = (e) => {
     setSearchTerm(e.target.value);
-  };
-
-  const handleLocationInputChange = (e) => {
-    setSearchLocation(e.target.value);
-  };
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
 
     if (searchTerm !== '') {
       const filteredPosition = jobs.filter((job) =>
@@ -40,6 +36,10 @@ const HomePage = ({ jobs, isLoading, windowWidth, setCurrentJob }) => {
       );
       setFilteredJobs(filteredPosition);
     }
+  };
+
+  const handleLocationInputChange = (e) => {
+    setSearchLocation(e.target.value);
 
     if (searchLocation !== '') {
       const filteredLocation = jobs.filter((job) =>
@@ -47,10 +47,10 @@ const HomePage = ({ jobs, isLoading, windowWidth, setCurrentJob }) => {
       );
       setFilteredJobs(filteredLocation);
     }
+  };
 
-    if (!isFullTime) {
-      setFilteredJobs(jobs.filter((job) => job.contract === 'Full Time'));
-    }
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
 
     setIsFullTime(false);
     setSearchTerm('');
