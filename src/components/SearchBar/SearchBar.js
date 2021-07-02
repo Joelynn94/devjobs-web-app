@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
 import SearchInput from '../SearchInput/SearchInput';
 import SearchLocation from '../SearchLocation/SearchLocation';

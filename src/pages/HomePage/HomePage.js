@@ -34,27 +34,22 @@ const HomePage = ({ jobs, isLoading, windowWidth, setCurrentJob }) => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    const filteredPosition = jobs.filter((job) => {
-      if (searchTerm !== '') {
-        return job.position.toLowerCase().includes(searchTerm.toLowerCase());
-      }
-    });
     if (searchTerm !== '') {
+      const filteredPosition = jobs.filter((job) =>
+        job.position.toLowerCase().includes(searchTerm.toLowerCase())
+      );
       setFilteredJobs(filteredPosition);
     }
 
-    const filteredLocation = jobs.filter((job) => {
-      if (searchLocation !== '') {
-        return job.location
-          .toLowerCase()
-          .includes(searchLocation.toLowerCase());
-      }
-    });
+    if (searchLocation !== '') {
+      const filteredLocation = jobs.filter((job) =>
+        job.location.toLowerCase().includes(searchLocation.toLowerCase())
+      );
+      setFilteredJobs(filteredLocation);
+    }
 
     if (!isFullTime) {
       setFilteredJobs(jobs.filter((job) => job.contract === 'Full Time'));
-    } else {
-      setFilteredJobs(jobs);
     }
 
     setIsFullTime(false);

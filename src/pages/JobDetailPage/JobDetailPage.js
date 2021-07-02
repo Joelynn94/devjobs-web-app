@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import Container from '../../components/Container/Container';
@@ -12,7 +12,7 @@ const JobDetailPage = ({ jobs, currentJob, setCurrentJob }) => {
 
   useEffect(() => {
     setCurrentJob(jobs.find((job) => job.id === id));
-  }, [jobs]);
+  }, [jobs, id, setCurrentJob]);
 
   console.log(currentJob);
 
