@@ -4,27 +4,42 @@ import Input from '../Input/Input';
 import Button from '../Button/Button';
 
 import './MobileModalFilter.css';
+import SearchLocation from '../SearchLocation/SearchLocation';
 
-const MobileModalFilter = ({ onFilterClick }) => {
+const MobileModalFilter = ({
+  onFormSubmit,
+  onFilterClick,
+  searchLocation,
+  onLocationInputChange,
+  isChecked,
+  onCheckboxChange,
+}) => {
   return (
-    <div className='mobile-modal' onClick={onFilterClick}>
+    <form
+      className='mobile-modal'
+      onClick={onFilterClick}
+      onSubmit={onFormSubmit}
+    >
       <div
         className='mobile-modal__content'
         onClick={(e) => e.stopPropagation()}
       >
         <div className='mobile-modal__top'>
-          <Input
-            icon={'location'}
-            name='location'
-            placeholder='Filter by location...'
+          <SearchLocation
+            searchLocation={searchLocation}
+            onLocationInputChange={onLocationInputChange}
           />
         </div>
         <div className='mobile-modal__bottom'>
-          <FilterCheckbox label='Full-Time Only' />
+          <FilterCheckbox
+            label='Full-Time Only'
+            isChecked={isChecked}
+            onCheckboxChange={onCheckboxChange}
+          />
           <Button buttonStyle={'btn--primary'}>Search</Button>
         </div>
       </div>
-    </div>
+    </form>
   );
 };
 

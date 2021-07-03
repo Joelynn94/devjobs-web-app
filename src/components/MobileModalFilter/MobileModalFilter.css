@@ -24,8 +24,12 @@
   padding: 10px 24px;
 }
 
-.mobile-modal .ui-input__input {
-  padding: 10px 40px;
+.mobile-modal .location-input {
+  width: 100%;
+}
+
+.mobile-modal .location-input::after {
+  opacity: 0;
 }
 
 .mobile-modal__bottom {

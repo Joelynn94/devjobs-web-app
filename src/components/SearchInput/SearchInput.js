@@ -4,7 +4,7 @@ import Input from '../Input/Input';
 import './SearchInput.css';
 
 const SearchInput = ({ searchTerm, onSearchInputChange }) => {
-  console.log();
+  console.log(searchTerm);
   return (
     <Input
       className='search-input'

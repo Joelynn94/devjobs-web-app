@@ -72,7 +72,16 @@ const HomePage = ({ jobs, isLoading, windowWidth, setCurrentJob }) => {
           onLocationInputChange={handleLocationInputChange}
         />
       ) : (
-        <MobileSearchBar />
+        <MobileSearchBar
+          isChecked={isChecked}
+          onCheckboxChange={handleCheckboxChange}
+          isFullTime={isFullTime}
+          searchTerm={searchTerm}
+          onSearchInputChange={handleSearchInputChange}
+          onFormSubmit={handleFormSubmit}
+          searchLocation={searchLocation}
+          onLocationInputChange={handleLocationInputChange}
+        />
       )}
       <GridContainer>
         {filteredJobs.length > 0

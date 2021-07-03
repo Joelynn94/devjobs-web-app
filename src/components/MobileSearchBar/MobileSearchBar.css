@@ -9,10 +9,13 @@
   height: 60px;
 }
 
-.mobile-search-bar .ui-input__group {
+.mobile-search-bar .search-input {
   flex: 1;
-  padding-left: 0;
   width: 100%;
+}
+
+.mobile-search-bar .search-input::after {
+  opacity: 0;
 }
 
 .mobile-search-bar .ui-input__input-pad-0 {

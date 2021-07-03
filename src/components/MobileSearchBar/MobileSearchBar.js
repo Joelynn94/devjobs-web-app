@@ -1,11 +1,19 @@
 import React, { useState } from 'react';
 import Button from '../Button/Button';
-import Input from '../Input/Input';
 import MobileModalFilter from '../MobileModalFilter/MobileModalFilter';
+import SearchInput from '../SearchInput/SearchInput';
 
 import './MobileSearchBar.css';
 
-const MobileSearchBar = () => {
+const MobileSearchBar = ({
+  isChecked,
+  onCheckboxChange,
+  searchTerm,
+  onSearchInputChange,
+  searchLocation,
+  onLocationInputChange,
+  onFormSubmit,
+}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleFilterClick = () => {
@@ -14,7 +22,10 @@ const MobileSearchBar = () => {
 
   return (
     <div className='mobile-search-bar'>
-      <Input placeholder='Filter by title...' />
+      <SearchInput
+        searchTerm={searchTerm}
+        onSearchInputChange={onSearchInputChange}
+      />
       <div className='mobile-search-bar__buttons'>
         <Button onClick={handleFilterClick}>
           <svg width='24' height='24' xmlns='http://www.w3.org/2000/svg'>
@@ -35,7 +46,17 @@ const MobileSearchBar = () => {
           </svg>
         </Button>
       </div>
-      {isModalOpen && <MobileModalFilter onFilterClick={handleFilterClick} />}
+      {isModalOpen && (
+        <MobileModalFilter
+          onFilterClick={handleFilterClick}
+          searchLocation={searchLocation}
+          onLocationInputChange={onLocationInputChange}
+          isChecked={isChecked}
+          onCheckboxChange={onCheckboxChange}
+          onFormSubmit={onFormSubmit}
+          isModalOpen={isModalOpen}
+        />
+      )}
     </div>
   );
 };
