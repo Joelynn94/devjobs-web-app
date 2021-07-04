@@ -1,6 +1,5 @@
 import React from 'react';
 import FilterCheckbox from '../FilterCheckbox/FilterCheckbox';
-import Input from '../Input/Input';
 import Button from '../Button/Button';
 
 import './MobileModalFilter.css';
