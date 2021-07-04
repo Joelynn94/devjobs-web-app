@@ -3,6 +3,7 @@
   gap: var(--spacing-lg);
   grid-template-columns: 1fr;
   margin-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-lg);
 }
 
 @media (min-width: 768px) {
