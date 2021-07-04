@@ -53,8 +53,8 @@ function App() {
 
   // changes className of root html so css variables can be used
   darkTheme
-    ? (document.documentElement.className = 'theme-light')
-    : (document.documentElement.className = 'theme-dark');
+    ? (document.documentElement.className = 'theme-dark')
+    : (document.documentElement.className = 'theme-light');
 
   // function to set the windowWidth state
   function handleWindowResize() {
