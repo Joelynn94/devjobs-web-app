@@ -9,7 +9,7 @@ import './index.css';
 
 function App() {
   const [darkTheme, setDarkTheme] = useState(
-    () => localStorage.getItem('dark_theme') === 'false'
+    () => localStorage.getItem('dark_theme') === 'true'
   );
   const [windowWidth, setWindowWidth] = useState(() =>
     localStorage.getItem('window_size')
@@ -25,11 +25,6 @@ function App() {
     localStorage.setItem('dark_theme', darkTheme);
     // immediately set the window size on page render and every window size changes
     localStorage.setItem('window_size', windowWidth);
-
-    // changes classname of root html so css variables can be used
-    darkTheme
-      ? (document.documentElement.className = 'theme-dark')
-      : (document.documentElement.className = 'theme-light');
 
     // cleanup event
     return () => {
@@ -55,6 +50,11 @@ function App() {
         setIsLoading(false);
       });
   }, []);
+
+  // changes className of root html so css variables can be used
+  darkTheme
+    ? (document.documentElement.className = 'theme-light')
+    : (document.documentElement.className = 'theme-dark');
 
   // function to set the windowWidth state
   function handleWindowResize() {
