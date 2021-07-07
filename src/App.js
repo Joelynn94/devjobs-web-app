@@ -9,7 +9,7 @@ import './index.css';
 
 function App() {
   const [darkTheme, setDarkTheme] = useState(
-    () => localStorage.getItem('dark_theme') === 'true'
+    () => localStorage.getItem('dark_theme') === 'false'
   );
   const [windowWidth, setWindowWidth] = useState(() =>
     localStorage.getItem('window_size')
