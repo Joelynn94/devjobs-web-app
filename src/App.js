@@ -18,11 +18,23 @@ function App() {
   const [jobs, setJobs] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
+  console.log(darkTheme);
+
+  // changes className of root body element so css variables can be used
+  darkTheme
+    ? (document.documentElement.className = 'theme-dark')
+    : (document.documentElement.className = 'theme-light');
+
+  useEffect(() => {
+    // immediately set the dark theme on page render and every theme changes
+    localStorage.setItem('dark_theme', darkTheme);
+
+    // dependant on the windowWidth state and darkTheme state
+  }, [darkTheme]);
+
   useEffect(() => {
     // call the handlewindowresize function when the window is resized
     window.addEventListener('resize', handleWindowResize);
-    // immediately set the dark theme on page render and every theme changes
-    localStorage.setItem('dark_theme', darkTheme);
     // immediately set the window size on page render and every window size changes
     localStorage.setItem('window_size', windowWidth);
 
@@ -30,9 +42,7 @@ function App() {
     return () => {
       window.removeEventListener('resize', handleWindowResize);
     };
-
-    // dependant on the windowWidth state and darkTheme state
-  }, [windowWidth, darkTheme]);
+  }, [windowWidth]);
 
   useEffect(() => {
     setIsLoading(true);
@@ -51,24 +61,20 @@ function App() {
       });
   }, []);
 
-  // changes className of root html so css variables can be used
-  darkTheme
-    ? (document.documentElement.className = 'theme-dark')
-    : (document.documentElement.className = 'theme-light');
+  // toggle the theme - passed to ToggleSwitch component
+  function handleThemeChange() {
+    setDarkTheme(!darkTheme);
+  }
 
   // function to set the windowWidth state
   function handleWindowResize() {
     setWindowWidth(window.innerWidth);
   }
 
-  // toggle the theme - passed to ToggleSwitch component
-  function handleThemeChange() {
-    setDarkTheme(!darkTheme);
-  }
-
   return (
     <Router>
       <Header
+        darkTheme={darkTheme}
         windowWidth={windowWidth}
         onWindowResize={handleWindowResize}
         onThemeChange={handleThemeChange}

@@ -4,11 +4,7 @@ import moonIcon from '../../assets/desktop/icon-moon.svg';
 
 import './ToggleSwitch.css';
 
-const ToggleSwitch = ({ onThemeChange }) => {
-  const handleThemeToggle = () => {
-    onThemeChange();
-  };
-
+const ToggleSwitch = ({ darkTheme, onThemeChange }) => {
   return (
     <div className='toggle'>
       <img src={sunIcon} alt='light theme icon' />
@@ -16,7 +12,8 @@ const ToggleSwitch = ({ onThemeChange }) => {
         <input
           className='toggle-switch__checkbox'
           type='checkbox'
-          onChange={handleThemeToggle}
+          checked={darkTheme}
+          onChange={onThemeChange}
         />
         <span className='toggle-switch__switch'></span>
       </label>
