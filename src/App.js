@@ -14,11 +14,10 @@ function App() {
   const [windowWidth, setWindowWidth] = useState(() =>
     localStorage.getItem('window_size')
   );
-  const [currentJob, setCurrentJob] = useState({});
   const [jobs, setJobs] = useState([]);
+  const [currentJob, setCurrentJob] = useState({});
   const [isLoading, setIsLoading] = useState(false);
-
-  console.log(darkTheme);
+  const [jobsVisible, setJobsVisible] = useState(12);
 
   // changes className of root body element so css variables can be used
   darkTheme
@@ -71,6 +70,10 @@ function App() {
     setWindowWidth(window.innerWidth);
   }
 
+  function showMoreJobs() {
+    setJobsVisible((prevState) => prevState + 3);
+  }
+
   return (
     <Router>
       <Header
@@ -89,6 +92,8 @@ function App() {
               setIsLoading={setIsLoading}
               currentJob={currentJob}
               setCurrentJob={setCurrentJob}
+              showMoreJobs={showMoreJobs}
+              jobsVisible={jobsVisible}
             />
           </Route>
           <Route exact path='/jobs/:id'>

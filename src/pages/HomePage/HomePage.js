@@ -6,8 +6,16 @@ import JobCard from '../../components/JobCard/JobCard';
 import SkeletonJob from '../../skeletons/SkeletonJob';
 import Container from '../../components/Container/Container';
 import GridContainer from '../../components/GridContainer/GridContainer';
+import Button from '../../components/Button/Button';
 
-const HomePage = ({ jobs, isLoading, windowWidth, setCurrentJob }) => {
+const HomePage = ({
+  jobs,
+  isLoading,
+  windowWidth,
+  setCurrentJob,
+  jobsVisible,
+  showMoreJobs,
+}) => {
   const [filteredJobs, setFilteredJobs] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [searchLocation, setSearchLocation] = useState('');
@@ -85,14 +93,21 @@ const HomePage = ({ jobs, isLoading, windowWidth, setCurrentJob }) => {
       )}
       <GridContainer>
         {filteredJobs.length > 0
-          ? filteredJobs.map((job) => (
-              <JobCard key={job.id} job={job} setCurrentJob={setCurrentJob} />
-            ))
+          ? filteredJobs
+              .slice(0, jobsVisible)
+              .map((job) => (
+                <JobCard key={job.id} job={job} setCurrentJob={setCurrentJob} />
+              ))
           : jobs.map((job) => (
               <JobCard key={job.id} job={job} setCurrentJob={setCurrentJob} />
             ))}
         {isLoading && <SkeletonJob />}
       </GridContainer>
+      <div className='load-more'>
+        <Button onClick={showMoreJobs} buttonStyle={'btn--primary'}>
+          Load More
+        </Button>
+      </div>
     </Container>
   );
 };

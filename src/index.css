@@ -100,3 +100,9 @@ p {
 img {
   max-width: 100%;
 }
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-xl);
+}
