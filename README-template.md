@@ -12,11 +12,7 @@ This is a solution to the [GitHub Jobs API challenge on Frontend Mentor](https:/
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -28,24 +24,15 @@ Users should be able to:
 - See hover states for all interactive elements throughout the site
 - View all jobs currently live on the GitHub Jobs API
 - Be able to click a job from the index page so that they can read more information and apply for the job
-- **Bonus**: Have the correct color scheme chosen for them based on their computer preferences. _Hint_: Research `prefers-color-scheme` in CSS.
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![](./screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Joelynn94/devjobs-web-app)
+- Live Site URL: [Add live site URL here](https://jl-dev-jobs.netlify.app/)
 
 ## My process
 
@@ -56,59 +43,33 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- LocalStorage 
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+I was struggling with filtering the jobs correctly. At first I was only able to filter based on the job title, or location, or full time but not all criteria at once. I kept working through the issue and finally found a solution. I had to add the filtering in the onSubmit and filter based on all inputs at once. I also used react lazy state to control the light/dark theme toggle. I provided code snippets for both of these, below. 
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+```js
+  const filteredItems = jobs.filter(
+    (job) =>
+      job.position.toLowerCase().includes(searchTerm.toLowerCase()) &&
+      job.location.toLowerCase().includes(searchLocation.toLowerCase()) &&
+      job.contract === "Full Time"
+  );
 ```
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+  const [darkTheme, setDarkTheme] = useState(
+    () => localStorage.getItem('dark_theme') === 'false'
+  );
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+I will continue working on searching/filtering arrays and strings by solving alrgothim problems on CodeWars. I also want to refine my application architecture. I am always looking for ways to cleanup my code. 
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [Joseph Lynn](https://www.josephlynn.com/)
+- Frontend Mentor - [@Joelynn94](https://www.frontendmentor.io/profile/Joelynn94)
+- Twitter - [@joe1ynn](https://twitter.com/joe1ynn)
