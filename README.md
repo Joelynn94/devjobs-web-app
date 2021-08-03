@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Github](https://github.com/Joelynn94/devjobs-web-app)
-- Live Site URL: [Live Site](https://jl-dev-jobs.netlify.app/)
+- Solution URL: [https://github.com/Joelynn94/devjobs-web-app](https://github.com/Joelynn94/devjobs-web-app)
+- Live Site URL: [https://jl-dev-jobs.netlify.app/](https://jl-dev-jobs.netlify.app/)
 
 ## My process
 
