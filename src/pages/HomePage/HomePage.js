@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-import SearchBar from '../../components/SearchBar/SearchBar';
-import MobileSearchBar from '../../components/MobileSearchBar/MobileSearchBar';
-import JobCard from '../../components/JobCard/JobCard';
-import SkeletonJob from '../../skeletons/SkeletonJob';
-import Container from '../../components/Container/Container';
-import GridContainer from '../../components/GridContainer/GridContainer';
-import Button from '../../components/Button/Button';
+import SearchBar from "../../components/SearchBar/SearchBar";
+import MobileSearchBar from "../../components/MobileSearchBar/MobileSearchBar";
+import JobCard from "../../components/JobCard/JobCard";
+import SkeletonJob from "../../skeletons/SkeletonJob";
+import Container from "../../components/Container/Container";
+import GridContainer from "../../components/GridContainer/GridContainer";
+import Button from "../../components/Button/Button";
 
 const HomePage = ({
   jobs,
@@ -17,8 +17,8 @@ const HomePage = ({
   showMoreJobs,
 }) => {
   const [filteredJobs, setFilteredJobs] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [searchLocation, setSearchLocation] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
+  const [searchLocation, setSearchLocation] = useState("");
   const [isFullTime, setIsFullTime] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
 
@@ -29,40 +29,26 @@ const HomePage = ({
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
     setIsFullTime(!isFullTime);
-
-    if (!isFullTime) {
-      setFilteredJobs(jobs.filter((job) => job.contract === 'Full Time'));
-    }
   };
 
   const handleSearchInputChange = (e) => {
     setSearchTerm(e.target.value);
-
-    if (searchTerm !== '') {
-      const filteredPosition = jobs.filter((job) =>
-        job.position.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      setFilteredJobs(filteredPosition);
-    }
   };
 
   const handleLocationInputChange = (e) => {
     setSearchLocation(e.target.value);
-
-    if (searchLocation !== '') {
-      const filteredLocation = jobs.filter((job) =>
-        job.location.toLowerCase().includes(searchLocation.toLowerCase())
-      );
-      setFilteredJobs(filteredLocation);
-    }
   };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    setIsFullTime(false);
-    setSearchTerm('');
-    setSearchLocation('');
+    const filteredItems = jobs.filter(
+      (job) =>
+        job.position.toLowerCase().includes(searchTerm.toLowerCase()) &&
+        job.location.toLowerCase().includes(searchLocation.toLowerCase()) &&
+        job.contract === "Full Time"
+    );
+    setFilteredJobs(filteredItems);
   };
 
   return (
@@ -103,8 +89,8 @@ const HomePage = ({
             ))}
         {isLoading && <SkeletonJob />}
       </GridContainer>
-      <div className='load-more'>
-        <Button onClick={showMoreJobs} buttonStyle={'btn--primary'}>
+      <div className="load-more">
+        <Button onClick={showMoreJobs} buttonStyle={"btn--primary"}>
           Load More
         </Button>
       </div>
